@@ -1,0 +1,21 @@
+.button{
+    padding: 10px;
+    background-color: teal;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+    
+    a {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    &:hover{
+        a {
+        color: teal;
+        }
+        
+        background-color: #fff;
+        transition-duration: 0.3s;
+    }
+    
+}

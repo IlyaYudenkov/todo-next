@@ -16,7 +16,7 @@ const LinkButton:FC<ILinkButton> = ({text, onclick}) => {
     useEffect(() => {
         text === 'Log out' && setPath('/signin')
         text === 'Create new case' && setPath('/new')
-        text === 'MainPage' && setPath('/main')     
+        text === 'Cases Page' && setPath('/cases')     
     },[text])
 
   return (

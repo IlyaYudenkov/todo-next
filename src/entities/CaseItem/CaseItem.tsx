@@ -5,8 +5,7 @@ import cl from './_CaseItem.module.scss'
 import { ICase } from '@/shared/types/interfaces'
 import Image from 'next/image';
 import Xmark from '../../shared/assets/img/Krestiksvgpng.ru_.svg'
-
-
+import Link from 'next/link';
 
 
 const CaseItem:FC<ICase> = ({id, userId, text, status }) => {
@@ -18,7 +17,7 @@ const CaseItem:FC<ICase> = ({id, userId, text, status }) => {
   return (
     <li className={cl.caseItem}>
         <span>{status}</span>
-        <span>{text}</span>
+        <Link href={`/cases/${id}`}>{text}</Link>
         <Image src={Xmark} alt="Xmark" width={30} height={30} onClick={() => deleteTheCase(id)}/>
     </li>
   )

@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className={cl.header}>
             <LinkButton text='Log out'/>
-            <LinkButton text='MainPage'/>
+            <LinkButton text='Cases Page'/>
             <LinkButton text='Create new case'/>
      
     </header>

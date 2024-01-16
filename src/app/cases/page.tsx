@@ -1,15 +1,8 @@
 import CasesList from "@/widgets/CasesList/ui/CasesList"
 import { Metadata } from "next"
+import { getCases } from "./lib/getCases";
 
 
-async function getCases(){
-  const response = await fetch(`http://localhost:3001/cases`, {
-      next:{
-          revalidate: 60
-      }
-  })
-  return response.json();
-}
 
 export const metadata: Metadata = {
   title: 'TodoNext | CasesPage',
@@ -20,6 +13,7 @@ export const metadata: Metadata = {
 export default async function CasesPage() {
 
   const cases = await getCases();
+
   return (
     <>
       <h1>TodoList of user Ilya Yudenkov</h1>

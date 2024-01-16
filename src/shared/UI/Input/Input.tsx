@@ -6,10 +6,11 @@ interface IInput {
     label: string,
     name: string,
     placeholder: string,
+    defaultValue?: string
 }
 
 
-const Input: FC<IInput> = ({ type, label, name, placeholder,  }) => {
+const Input: FC<IInput> = ({ type, label, name, placeholder, defaultValue  }) => {
     return (
         <>
             <label className={cl.label}>{label}</label>
@@ -17,7 +18,8 @@ const Input: FC<IInput> = ({ type, label, name, placeholder,  }) => {
                 type={type}
                 name={name}
                 className={cl.input}
-                placeholder={placeholder} />
+                placeholder={placeholder} 
+                defaultValue={defaultValue}/>
         </>
 
     )

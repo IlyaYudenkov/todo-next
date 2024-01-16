@@ -1,23 +1,16 @@
 {
-    "cases": [
+  "cases": [
     {
-        "id": 1,
-        "userId": 1,
-        "text": "wash the dishes",
-        "status": "false"
+      "id": "1",
+      "userId": 1,
+      "text": "wash the dishes",
+      "status": "false"
     },
     {
-        "id": 2,
-        "userId": 1,
-        "text": "do the workout",
-        "status": "true"
-    },
-    {
-        "id":3,
-        "userId": 1,
-        "text": "go to the grocery store",
-        "status": "true"
+      "id": "2",
+      "userId": 1,
+      "text": "do the workout",
+      "status": "true"
     }
-]
-
+  ]
 }

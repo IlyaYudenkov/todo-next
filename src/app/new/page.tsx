@@ -1,5 +1,5 @@
+import CreateNewCase from '@/widgets/CreateNewCase/CreateNewCase';
 import { Metadata } from 'next';
-import React from 'react'
 
 export const metadata: Metadata = {
     title: 'TodoNext | CreateNewCase',
@@ -10,6 +10,7 @@ export default function CreateNewCasePage () {
   return (
     <div>
         <h1>Create New Case</h1>
+        <CreateNewCase/>
     </div>
   )
 }

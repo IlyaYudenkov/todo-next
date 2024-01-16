@@ -1,17 +1,10 @@
 import React from 'react'
-
-async function getCase(id:string){
-    const response = await fetch(`http://localhost:3001/cases/${id}`, {
-        next:{
-            revalidate: 60
-        }
-    })
-    return response.json();
-}
+import { getCase } from './lib/getCase'
+import LinkButton from '@/shared/UI/LinkButton/LinkButton'
 
 type TCasePage = {
     params:{
-        id: string
+        id: number
     }
 }
 
@@ -24,6 +17,7 @@ export default async function CasePage ({params: {id}}: TCasePage) {
         <h1>Page of case {id}</h1>
         <p>{business.text}</p>
         <p>{business.status}</p>
+        <LinkButton text='Edit case' path={`/cases/${id}/edit`}/>
       </>
       
     )

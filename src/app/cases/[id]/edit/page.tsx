@@ -12,8 +12,6 @@ type TCasePage = {
   }
 
 
-
-
 export default async function EditCasePage({params:{id}}:TCasePage) {
 
     const business = await getCase(id)
@@ -28,7 +26,7 @@ export default async function EditCasePage({params:{id}}:TCasePage) {
           headers: {
               'Content-Type': 'application/json',
         },
-          body: JSON.stringify({text, userId: 1, status: 'false'})
+          body: JSON.stringify({text, status: false})
         })
         revalidatePath('/cases')
         revalidatePath(`/cases/${id}`)

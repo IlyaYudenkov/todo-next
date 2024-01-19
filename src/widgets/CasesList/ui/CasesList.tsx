@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import cl from './_CasesList.module.scss'
-import CaseItem from '@/entities/CaseItem/CaseItem'
+import CaseItem from '@/entities/CaseItem/ui/CaseItem'
 import { ICase } from '@/shared/types/interfaces'
 
 

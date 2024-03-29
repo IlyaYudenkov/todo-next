@@ -1,6 +1,7 @@
 import CasesList from "@/widgets/CasesList/ui/CasesList"
 import { Metadata } from "next"
 import { getCases } from "./lib/getCases";
+import initTranslations from "@/app/i18n";
 
 
 
@@ -10,13 +11,19 @@ export const metadata: Metadata = {
 }
 
 
-export default async function CasesPage() {
+const i18nNamespaces = ['cases'];
+
+
+export default async function CasesPage({ params: { locale } }: { params: { locale: string } }) {
+
+  const { t, resources } = await initTranslations(locale, i18nNamespaces);
+
 
   const cases = await getCases();
 
   return (
     <>
-      <h1>TodoList of user Ilya Yudenkov</h1>
+      <h1>{t('mainTitle')}</h1>
       <CasesList casesList={cases ? cases : []}/>
     </>
     

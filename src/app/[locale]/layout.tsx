@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cl.global}>
-        <Header/>
+        <Header />
         {children}
       </body>
     </html>

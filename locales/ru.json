@@ -1,0 +1,19 @@
+{
+    "CasesPage": {
+        "mainTitle": "TodoList пользователя Илья Юденков"
+    },
+    "MainPage": {
+        "mainTitle": "Главная страница"
+    },
+    "NewPage": {
+        "newTitle": "Создать новую задачу"
+    },
+    "Common": {
+        "logOutButton": "Выйти из аккаунта",
+        "toCasesButton": "Страница задач",
+        "toNewButton": "Создать новую задачу",
+        "label": "Change language",
+        "locale": "{locale, select, ru {рус Русский} en {англ Английский} other {Unknown}}"
+
+    }
+}

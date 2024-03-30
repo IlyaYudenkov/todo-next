@@ -12,7 +12,6 @@ import { checkTheBox, deleteTheCase } from '../lib/serverActions';
 
 const CaseItem: FC<ICase> = ({ id, text, status }) => {
   const [pending, startTransition] = useTransition()
-  console.log(status);
   
   return (
     <li className={cl.caseItem}>

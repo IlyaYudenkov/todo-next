@@ -1,8 +1,11 @@
 import CasesList from "@/widgets/CasesList/ui/CasesList"
 import { Metadata } from "next"
 import { getCases } from "./lib/getCases";
-import initTranslations from "@/app/i18n";
+import { useTranslations } from "next-intl";
 
+type Props = {
+  params: {locale: string};
+};
 
 
 export const metadata: Metadata = {
@@ -11,21 +14,18 @@ export const metadata: Metadata = {
 }
 
 
-const i18nNamespaces = ['cases'];
+export default  function CasesPage({params: {locale}}: Props) {
+  
 
+  const t = useTranslations('CasesPage')
 
-export default async function CasesPage({ params: { locale } }: { params: { locale: string } }) {
-
-  const { t, resources } = await initTranslations(locale, i18nNamespaces);
-
-
-  const cases = await getCases();
+  // const cases = await getCases();
 
   return (
-    <>
+    <div>
       <h1>{t('mainTitle')}</h1>
-      <CasesList casesList={cases ? cases : []}/>
-    </>
+      {/* <CasesList casesList={cases ? cases : []}/> */}
+    </div>
     
   )
 }

@@ -3,6 +3,7 @@
 import React, { FC } from 'react'
 import cl from './_LinkButton.module.scss'
 import Link from 'next/link'
+import { useLocale } from 'next-intl'
 
 interface ILinkButton{
     text: string,
@@ -12,9 +13,13 @@ interface ILinkButton{
 
 const LinkButton:FC<ILinkButton> = ({text, onclick, path}) => {
 
+  const locale = useLocale()
+  const linkPath = `/${locale}${path}`;
+  
+
   return (
     <button className={cl.button} onClick={() => onclick}>
-      <Link href={path} >
+      <Link href={linkPath} >
         {text}
       </Link>
     </button>

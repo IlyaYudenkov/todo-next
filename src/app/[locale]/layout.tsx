@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import cl from '@/shared/styles/_global.module.scss'
 import Header from '@/widgets/Header/Header'
+import StoreProvider from '../StoreProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,10 +31,13 @@ export default function LocaleLayout({
     
     <html lang={locale}>
       <body className={cl.global}>
-        <Header/>
-        <main>
-          {children}
-        </main>
+        <StoreProvider>
+          <Header />
+          <main>
+            {children}
+          </main>
+        </StoreProvider>
+
       </body>
     </html>
   );

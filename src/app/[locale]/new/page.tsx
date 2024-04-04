@@ -1,3 +1,4 @@
+import { T } from '@/shared/lib/TranslateText/ui/T';
 import CreateNewCase from '@/widgets/CreateNewCase/CreateNewCase';
 import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
@@ -14,7 +15,7 @@ export default function CreateNewCasePage () {
 
   return (
     <div>
-        <h1>{t('newTitle')}</h1>
+        <h1><T>Добавить новый</T></h1>
         <CreateNewCase/>
     </div>
   )
